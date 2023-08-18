@@ -17,15 +17,6 @@ end
 target 'App' do
   capacitor_pods
   # Add your Pods here
-  def capacitor_pods
-  pod 'Capacitor', :path => '../../node_modules/@capacitor/ios'
-  pod 'CapacitorCordova', :path => '../../node_modules/@capacitor/ios'
-  pod 'NativescriptCapacitor', :path => '../../node_modules/@nativescript/capacitor'
-end
-
-target 'App' do
-  capacitor_pods
-  # Add your Pods here
 
   # NativeScript
   pod 'NativeScriptSDK', '~> 8.4.2'
@@ -33,7 +24,6 @@ target 'App' do
 
   # Zip/Unzip
   pod 'SSZipArchive', '~> 2.4.3'
-end
 end
 
 post_install do |installer|

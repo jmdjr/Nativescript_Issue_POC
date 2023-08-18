@@ -7,6 +7,10 @@
     "build": "nx build",
     "watch": "nx build --watch --configuration development",
     "test": "nx test",
+    "ios": "npx cap open ios",
+    "ios-sync": "npx cap sync",
+    "ios-build": "nx build:mobile && npm run ios-sync",
+    "ios-build-open":"npm run ios-build && npm run ios",
     "build:nativescript": "node --experimental-import-meta-resolve node_modules/.bin/build-nativescript",
     "build:mobile": "npm-run-all build build:nativescript",
     "dev:nativescript": "dev-nativescript"

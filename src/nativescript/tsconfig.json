@@ -3,7 +3,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "baseUrl": "./",
-    "outDir": "../../www/nativescript",
+    "outDir": "../../dist/nativescript",
     "sourceMap": false,
     "declaration": false,
     "downlevelIteration": true,
