@@ -1,3 +1,4 @@
+require_relative '../../node_modules/@nativescript/capacitor/ios/nativescript.rb'
 require_relative '../../node_modules/@capacitor/ios/scripts/pods_helpers'
 
 platform :ios, '13.0'
@@ -24,14 +25,14 @@ target 'App' do
   capacitor_pods
   # Add your Pods here
 
-  # NativeScript
-  pod 'NativeScriptSDK', '~> 8.4.2'
-  pod 'NativeScriptUI'
-
+ pod 'NativeScriptSDK', '~> 8.4.2' 
+ pod 'NativeScriptUI', '~> 0.1.2'
+ 
   # Zip/Unzip
   pod 'SSZipArchive', '~> 2.4.3'
 end
 
 post_install do |installer|
   assertDeploymentTarget(installer)
+  nativescript_capacitor_post_install(installer)
 end
